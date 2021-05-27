@@ -1,5 +1,7 @@
 import 'package:app/core/navigator/controller.navigator.dart';
+import 'package:app/features/classes/classes.dart';
 import 'package:app/features/dashboard/home.dart';
+import 'package:app/features/grading_system/student_grades.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,8 +30,8 @@ class CustomButtonNavigator extends StatelessWidget {
   ];
   var pages = [
     HomePage(),
-    HomePage(),
-    HomePage(),
+    HandledClasses(),
+    StudentGradesPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -45,12 +47,12 @@ class CustomButtonNavigator extends StatelessWidget {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.business),
-                  label: 'Business',
+                  label: 'Classes',
                   backgroundColor: Colors.green,
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.school),
-                  label: 'School',
+                  label: 'Grades',
                   backgroundColor: Colors.purple,
                 ),
               ],

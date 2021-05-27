@@ -12,19 +12,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(20),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Obx(() => controller.selectedImagePath.value == ''
                     ? Text('Select Image')
                     : Image.file(File(controller.selectedImagePath.value))),
-                Text('Home page'),
-                ElevatedButton(
+                SizedBox(height: 10),
+                FloatingActionButton(
                     onPressed: () {
                       controller.openCamera(ImageSource.camera);
                     },
-                    child: Text('Camera'))
+                    child: Icon(Icons.camera))
               ],
             ),
           )),
